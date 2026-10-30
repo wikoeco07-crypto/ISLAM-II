@@ -1,0 +1,49 @@
+:root{
+  --bg:#f6f4ef;--surface:#ffffff;--ink:#16243a;--muted:#5a6678;
+  --blue:#17335c;--blue-2:#1f4a85;--gold:#b98a1f;--line:#dcd8cc;--on-blue:#f6f4ef;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1727;--surface:#15233a;--ink:#eef0f4;--muted:#a3adbd;--blue:#0a1424;--blue-2:#6f9ee0;--gold:#e0b34a;--line:#27385a;--on-blue:#eef0f4}}
+:root[data-theme="dark"]{--bg:#0e1727;--surface:#15233a;--ink:#eef0f4;--muted:#a3adbd;--blue:#0a1424;--blue-2:#6f9ee0;--gold:#e0b34a;--line:#27385a;--on-blue:#eef0f4}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lato,Arial,sans-serif;line-height:1.7;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;margin:0;line-height:1.3}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--blue);color:var(--on-blue)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:700;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:15px;opacity:.9}
+nav a:hover,nav a:focus-visible{opacity:1;color:var(--gold)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:var(--blue);color:var(--on-blue);position:relative;overflow:hidden;padding:84px 0 96px}
+.hero::before{content:"";position:absolute;inset:0;opacity:.13;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23e0b34a' stroke-width='1.5'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E")}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(40px,8vw,76px);font-weight:700}
+.hero .sub{font-size:20px;max-width:34em;margin:16px 0 28px;opacity:.92}
+.hero .loc{color:var(--gold);font-weight:600}
+.btn{display:inline-block;background:var(--gold);color:#14213a;font-weight:700;padding:12px 26px;border-radius:6px;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--on-blue);border:1.5px solid var(--gold);margin-inline-start:10px}
+section{padding:68px 0}
+section h2{font-size:34px;margin-bottom:10px}
+.lead{color:var(--muted);max-width:40em;margin:0 0 32px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.room{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.room .ph{height:150px;background:linear-gradient(135deg,var(--blue),var(--blue-2));display:grid;place-items:center;color:var(--gold);font-family:'Cormorant Garamond',Georgia,serif;font-size:48px}
+.room .b{padding:18px 20px 22px}
+.room h3{font-size:22px}
+.price{color:var(--blue-2);font-weight:700;margin-top:8px}
+.services{display:grid;gap:14px 28px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding:0;list-style:none;margin:0}
+.services li{padding:12px 0;border-bottom:1px solid var(--line)}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.contact{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+dl{margin:0}dt{font-weight:700;color:var(--blue-2)}dd{margin:0 0 14px}
+form{display:grid;gap:12px}
+label{font-size:15px;font-weight:600;display:grid;gap:4px}
+input,select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{background:var(--blue);color:var(--on-blue);padding:26px 0;text-align:center;font-size:15px}
+@media(max-width:640px){nav{display:none}.hero{padding:56px 0 64px}.btn.ghost{margin:10px 0 0}}

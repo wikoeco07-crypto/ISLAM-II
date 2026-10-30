@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hôtel Islam II – Tlemcen</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="#top" id="c-name-h"></a>
+  <nav><a href="#about">L’hôtel</a><a href="#rooms">Chambres</a><a href="#services">Services</a><a href="#contact">Réservation</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <p class="loc" id="c-city"></p>
+  <h1 id="c-name"></h1>
+  <p class="sub" id="c-tagline"></p>
+  <a class="btn" href="#contact">Réserver une chambre</a>
+  <a class="btn ghost" id="c-call" href="#">Nous appeler</a>
+</div></div>
+
+<section id="about"><div class="wrap">
+  <h2>À propos de l’hôtel</h2>
+  <p class="lead" id="c-about"></p>
+</div></section>
+
+<section id="rooms" class="alt"><div class="wrap">
+  <h2>Chambres et suites</h2>
+  <p class="lead">Tarifs par nuit, petit déjeuner inclus. Matelas supplémentaire : 1 000 DA.</p>
+  <div class="grid" id="rooms-list"></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2>Services</h2>
+  <ul class="services" id="services-list"></ul>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap">
+  <h2>Réservation et contact</h2>
+  <p class="lead">Envoyez votre demande par e-mail et nous confirmerons la disponibilité, ou appelez-nous directement.</p>
+  <div class="contact">
+    <dl>
+      <dt>Adresse</dt><dd id="c-address"></dd>
+      <dt>Téléphone</dt><dd><a id="c-phone" dir="ltr"></a></dd>
+      <dt>E-mail</dt><dd><a id="c-email" dir="ltr"></a></dd>
+      <dt>Informations</dt><dd id="c-hours"></dd>
+      <a class="btn" id="c-map" target="_blank" rel="noopener">Voir sur la carte</a>
+    </dl>
+    <form id="book">
+      <label>Nom complet<input name="name" required autocomplete="name"></label>
+      <label>Téléphone<input name="phone" type="tel" required dir="ltr" autocomplete="tel"></label>
+      <div class="row">
+        <label>Date d’arrivée<input name="in" type="date" required></label>
+        <label>Date de départ<input name="out" type="date" required></label>
+      </div>
+      <label>Type de chambre<select name="room" id="room-select"></select></label>
+      <button class="btn" type="submit">Envoyer la demande</button>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap" id="c-footer"></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
